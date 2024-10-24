@@ -9,8 +9,7 @@ let ball = {
   id: "ball",
   position: [border.right / 2, border.bottom / 2],
   diameter: 50,
-  radius: "1000px",
-  velocity: 4,
+  velocity: 5,
   direction: [1, 1],
 };
 
@@ -20,13 +19,6 @@ let direction = {
   up: [0, -1],
   down: [0, 1],
 };
-
-// adds two vectors to get new directions
-function addVector(vec1, vec2) {
-  let newVec = [vec1[0] + vec2[0], vec1[1] + vec2[1]];
-  console.log(newVec);
-  return newVec;
-}
 
 function getDirection(isPositiveX, isPositiveY) {
   isPositiveX = isPositiveX ? 1 : -1;
@@ -43,6 +35,11 @@ function updatePosition(item) {
     item.position[index] += item.velocity * item.direction[index];
   }
   return item;
+}
+
+function setSize(item, size = item.diameter) {
+  document.getElementById(item.id).style.height = `${item.diameter}px`;
+  document.getElementById(item.id).style.width = `${item.diameter}px`;
 }
 
 function move(item) {
@@ -128,4 +125,11 @@ function main() {
   // console.log(ball.velocity);
 }
 
+let balls = [];
+// get array of then balls different
+for (let ballCount = 0; ballCount > 10; ballCount++) {
+  balls.push();
+}
+
+setSize(ball);
 window.requestAnimationFrame(main);
