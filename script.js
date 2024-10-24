@@ -48,7 +48,7 @@ function updatePosition(item) {
 function move(item) {
   document.getElementById(item.id).style.left = `${item.position[0]}px`;
   document.getElementById(item.id).style.top = `${item.position[1]}px`;
-  console.log(document.getElementById(item.id).style.left);
+  // console.log(document.getElementById(item.id).style.left);
 }
 
 //
@@ -125,7 +125,7 @@ function main() {
   move(ball);
   requestAnimationFrame(main);
   // console.log(ball.position);
-  console.log(ball.velocity);
+  // console.log(ball.velocity);
 }
 
 window.requestAnimationFrame(main);
