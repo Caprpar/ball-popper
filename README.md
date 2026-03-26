@@ -1,4 +1,4 @@
 # A ball that bounces
 
 Mini game about popping balls (eventually..)
-![bouncing](./bouncing.gif)
+[Visit site](https://caprpar.github.io/ball-popper/)
